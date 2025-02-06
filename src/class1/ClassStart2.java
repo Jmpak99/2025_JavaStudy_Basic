@@ -6,10 +6,10 @@ public class ClassStart2 {
 
         String[] studentNames = {"학생1", "학생2"};
         int[] studentAges = {15, 16};
-        int[] stduentGrades = {90, 80};
+        int[] studentGrades = {90, 80};
 
         for (int i = 0; i < studentNames.length; i++) {
-            System.out.println("이름 : " + studentNames[i] + " 나이 : " + studentAges[i] + " 성적 : " + stduentGrades[i]);
+            System.out.println("이름 : " + studentNames[i] + " 나이 : " + studentAges[i] + " 성적 : " + studentGrades[i]);
         }
     }
 }
