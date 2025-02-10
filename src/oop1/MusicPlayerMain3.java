@@ -7,33 +7,22 @@ public class MusicPlayerMain3 {
         MusicPlayerData data = new MusicPlayerData();
 
         //음악 플레이어 켜기
-        data.isOn = true;
-        System.out.println("음악플레이어를 시작합니다");
+        on(data);
 
         //볼륨 증가
-        data.volume++;
-        System.out.println("음악 플레이어 볼륨 : " + data.volume);
+        volumUp(data);
 
         //볼륨 증가
-        data.volume++;
-        System.out.println("음악 플레이어 볼륨 : " + data.volume);
+        volumUp(data);
 
-        //볼류 감소
-        data.volume--;
-        System.out.println("음악 플레이어 볼륨 : " + data.volume);
-
+        //볼륨 감소
+        volumDown(data);
 
         //음악 플레이어 상태
-        System.out.println("음악 플레이어 상태 확인");
-        if(data.isOn) {
-            System.out.println("음악 플레이어 ON, 볼륨 : " + data.volume);
-        } else {
-            System.out.println("음악 플레이어 OFF");
-        }
+        showStatus(data);
 
         //음악 플레이어 끄기
-        data.isOn = false;
-        System.out.println("음악 플레이어를 종료합니다");
+        off(data);
     }
 
     static void on(MusicPlayerData data){
@@ -41,4 +30,30 @@ public class MusicPlayerMain3 {
         System.out.println("음악플레이어를 시작합니다");
 
     }
+
+    static void off(MusicPlayerData data){
+        data.isOn = false;
+        System.out.println("음악플레이어를 종료합니다");
+    }
+
+    static void volumUp(MusicPlayerData data) {
+        data.volume++;
+        System.out.println("음악플레이어 볼륨 : " + data.volume);
+    }
+
+    static void volumDown(MusicPlayerData data) {
+        data.volume--;
+        System.out.println("음악플레이어 볼륨 : " + data.volume);
+    }
+
+    static void showStatus(MusicPlayerData data){
+        System.out.println("음악 플레이어 상태 확인");
+        if(data.isOn) {
+            System.out.println("음악 플레이어 ON, 볼륨 : " + data.volume);
+        } else {
+            System.out.println("음악 플레이어 OFF");
+        }
+    }
+
+
 }
