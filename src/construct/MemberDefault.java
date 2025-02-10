@@ -5,7 +5,6 @@ public class MemberDefault {
 
 
     // 기본 생성자
-    public MemberDefault(){
-
+    MemberDefault(){
     }
 }
